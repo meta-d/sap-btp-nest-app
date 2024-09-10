@@ -1,0 +1,11 @@
+applications:
+  - name: my-bp-app
+    path: .
+    buildpacks:
+      - nodejs_buildpack
+    memory: 256M
+    command: yarn run start:prod
+    random-route: true
+    services:
+      - my-destination
+      - my-xsuaa
